@@ -20,15 +20,15 @@ def myNetwork():
     Intf( 'tap0', node=s1 )
 
     info( '*** Add hosts\n')
-    # h1 = net.addHost('h1', ip='0.0.0.0')
+    h1 = net.addHost('h1', ip='0.0.0.0')
 
     info( '*** Add links\n')
-    # net.addLink(h1, s1)
+    net.addLink(h1, s1)
 
     info( '*** Starting network\n')
     net.start()
 
-    # h1.cmdPrint('dhclient -v '+h1.defaultIntf().name)
+    h1.cmdPrint('dhclient -v '+h1.defaultIntf().name)
 
     CLI(net)
     net.stop()
