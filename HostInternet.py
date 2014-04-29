@@ -16,11 +16,11 @@ def myNetwork():
 
     info( '*** Add switches\n')
     s1 = net.addSwitch('s1')
-    Intf( 'eth1', node=s1 )
-    # Intf( 'tap0', node=s1 )
+
+    Intf( 'br1', node=s1 )
 
     info( '*** Add hosts\n')
-    h1 = net.addHost('h1', ip='0.0.0.0')
+    h1 = net.addHost('h1', ip='192.168.1.220')
 
     info( '*** Add links\n')
     net.addLink(h1, s1)

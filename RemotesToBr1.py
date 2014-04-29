@@ -16,7 +16,9 @@ def myNetwork():
 
     info( '*** Add switches\n')
     s1 = net.addSwitch('s1')
-    Intf( 'eth1', node=s1 )
+
+    Intf( 'br1', node=s1 )
+
     Intf( 'tap0', node=s1 )
     Intf( 'tap1', node=s1 )
 
