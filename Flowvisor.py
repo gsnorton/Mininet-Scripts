@@ -20,10 +20,10 @@ def myNetwork():
     s4 = net.addSwitch('s4')
 
     info( '*** Add hosts\n')
-    h1 = net.addHost('h1')
-    h2 = net.addHost('h2')
-    h3 = net.addHost('h3')
-    h4 = net.addHost('h4')
+    h1 = net.addHost('h1', ip='192.168.0.228')
+    h2 = net.addHost('h2', ip='192.168.0.229')
+    h3 = net.addHost('h3', ip='192.168.0.230')
+    h4 = net.addHost('h4', ip='192.168.0.231')
 
     info( '*** Add links\n')
     net.addLink(s1, s2)
