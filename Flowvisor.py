@@ -19,6 +19,7 @@ def myNetwork():
     s3 = net.addSwitch('s3')
     s4 = net.addSwitch('s4')
 
+
     info( '*** Add hosts\n')
     h1 = net.addHost('h1', ip='192.168.0.228')
     h2 = net.addHost('h2', ip='192.168.0.229')
@@ -35,6 +36,10 @@ def myNetwork():
     net.addLink(h2, s1)
     net.addLink(h3, s4)
     net.addLink(h4, s4)
+
+    info( '*** Add external interfaces\n')
+    Intf('tap0', node=s2)
+    Intf('tap1', node=s3)
 
     info( '*** Starting network\n')
     net.start()
